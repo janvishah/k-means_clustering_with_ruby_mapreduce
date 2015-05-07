@@ -1,0 +1,21 @@
+# step how to run map-reduce program using ruby
+1.	create .txt file in tmp folder
+2.	create map.rb and reduce.rb in tmp folder
+3.	run program without using hadoop using foloow command
+		cat dataset.txt | ruby map.rb | sort | ruby reduce.rb
+4.	copy map.rb and reduce.rb in /usr/local/hadoop folder
+5. 	go to /usr/local/hadoop/bin folder start hadoop using following command
+		start-all.sh
+6.  go to the /usr/local/hadoop/ and Copy dataset.txt file in hduser using HDFS
+		bin/hadoop dfs -copyFromLocal /home/janvi/tmp/ /user/hduser/k-mean
+7.	Now check the list in hduser
+		bin/hadoop dfs -ls /user/hduser/k-mean
+8.	Now run program using hadoop by following command
+		bin/hadoop jar contrib/streaming/hadoop-streaming-1.2.1.jar -file map.rb -mapper map.rb -file reduce.rb -reducer reduce.rb -input /user/hduser/k-mean/* -output /user/hduser/k-mean-op
+9.  Check output in /user/hsuser/k-mean-op directory
+		bin/hadoop dfs -ls /user/hduser/k-mean-op
+10. Show output file 
+		bin/hadoop dfs -cat /user/hsuser/k-mean-op/part-00000
+
+
+		
