@@ -1,7 +1,7 @@
 # step how to run map-reduce program using ruby
 1.	create .txt file in tmp folder
 2.	create map.rb and reduce.rb in tmp folder
-3.	run program without using hadoop using foloow command
+3.	run program without using hadoop using follow command
 		cat dataset.txt | ruby map.rb | sort | ruby reduce.rb
 4.	copy map.rb and reduce.rb in /usr/local/hadoop folder
 5. 	go to /usr/local/hadoop/bin folder start hadoop using following command

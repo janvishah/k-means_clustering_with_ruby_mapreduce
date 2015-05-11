@@ -19,7 +19,7 @@ Gnuplot.open do |gp|
   Gnuplot::Plot.new( gp ) do |plot|
   	plot.output outFname
 		plot.terminal 'png'
-    plot.title  "Array Plot Example"
+    plot.title  "Scatter Plot drugs_vs_accidents"
     plot.xlabel "Drug"
     plot.ylabel "No of road accident"    
 
@@ -101,7 +101,7 @@ Gnuplot.open do |gp|
   Gnuplot::Plot.new( gp ) do |plot|
   	plot.output '/home/janvi/tmp/cluster1.png'
 		plot.terminal 'png'
-    plot.title  "Array Plot Example"
+    plot.title  "Drugs vs accident cluster 1"
     plot.xlabel "Drug"
     plot.ylabel "No of road accident"    
 
@@ -120,7 +120,7 @@ Gnuplot.open do |gp|
   Gnuplot::Plot.new( gp ) do |plot|
   	plot.output '/home/janvi/tmp/cluster2.png'
 		plot.terminal 'png'
-    plot.title  "Array Plot Example"
+    plot.title  "Drugs vs accident cluster 2"
     plot.xlabel "Drug"
     plot.ylabel "No of road accident"    
 
@@ -139,7 +139,7 @@ Gnuplot.open do |gp|
   Gnuplot::Plot.new( gp ) do |plot|
   	plot.output '/home/janvi/tmp/cluster3.png'
 		plot.terminal 'png'
-    plot.title  "Array Plot Example"
+    plot.title  "Drugs vs accident cluster 3"
     plot.xlabel "Drug"
     plot.ylabel "No of road accident"    
 
@@ -150,4 +150,4 @@ Gnuplot.open do |gp|
 end
 
 
-
+\
